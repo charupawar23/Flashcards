@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flashcards Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+        <h1>Flashcards</h1>
+        <div class="controls">
+          <select id="deckSelect"></select>
+          <button id="newDeckBtn" class="btn">+ Deck</button>
+          <button id="delDeckBtn" class="btn danger">Delete Deck</button>
+          <button id="addCardBtn" class="btn">+ Add Card</button>
+          <button id="importBtn" class="btn secondary">Import</button>
+          <button id="exportBtn" class="btn secondary">Export</button>
+        </div>
+    </header>
+
+    <main>
+      <div class="card-area">
+        <div id="card" class="card">
+          <div id="question" class="front">No cards yet. Add one!</div>
+          <div id="answer" class="back hidden"></div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <button id="prevBtn" class="btn">Previous</button>
+        <button id="showBtn" class="btn">Show Answer</button>
+        <button id="nextBtn" class="btn">Next</button>
+      </div>
+
+      <div class="editor hidden" id="editor">
+        <h2 id="editorTitle">Add Card</h2>
+        <label>Question</label>
+        <textarea id="qInput" rows="3"></textarea>
+        <label>Answer</label>
+        <textarea id="aInput" rows="3"></textarea>
+        <div class="editor-actions">
+          <button id="saveBtn" class="btn primary">Save</button>
+          <button id="cancelBtn" class="btn">Cancel</button>
+          <button id="deleteBtn" class="btn danger hidden">Delete</button>
+        </div>
+      </div>
+
+      <div id="cardList" class="card-list"></div>
+    </main>
+
+    <footer>
+      <small>Flashcards quiz app — stores data locally in your browser.</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
